@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "http://ruby.taobao.org/"
 
 group :development do
   gem 'rake', '~> 10.0'
@@ -13,6 +13,7 @@ group :development do
   gem 'sass-globbing', '~> 1.0.0'
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
+  gem 'wdm', '>= 0.1.0'
 end
 
 gem 'sinatra', '~> 1.4.2'
