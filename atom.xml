@@ -4,7 +4,7 @@
   <title><![CDATA[Blogs of astrid_chung]]></title>
   <link href="http://astrid2014.github.io/atom.xml" rel="self"/>
   <link href="http://astrid2014.github.io/"/>
-  <updated>2015-07-12T20:17:00+08:00</updated>
+  <updated>2015-07-12T23:22:06+08:00</updated>
   <id>http://astrid2014.github.io/</id>
   <author>
     <name><![CDATA[钟炜凤]]></name>
@@ -110,6 +110,12 @@
 
 <h3>Step6：解决中文问题</h3>
 
+<p>如果博客中包含中文，则需要进行一些设置：    <br/>
+1.在环境变量中设置下面的键值对：
+LANG=zh_CN.UTF-8<br/>
+LC_ALL=zh_CN.UTF-8<br/>
+2.含有中文的文件，需要保存为UTF-8无BOM格式编码</p>
+
 <p>到此所有的准备工作已经结束，可以写博客了。</p>
 
 <hr />
@@ -134,9 +140,33 @@
 其中 “title” 并不是博文标题，而是和生成的文件名以及 URL 有关，该名称不支持中文；博客的标题可以在生成的 markdown 文件中的 “title” 修改，可为中文。<br/>
   2.在 octopress\source_posts 目录下 ，找出对应生成的 <em><code>markdown</code></em> 文件，使用 Sublime Text3 和 markdown 语法来编辑博客内容；<br/>
   3. 执行 <em><code>rake generate</code></em> 来生成文章；<br/>
-  4. 执行 <em><code>rake preview</code></em> 在本地 localhost:4000 进行预览；<br/>
-  5. 执行 <em><code>rake deploy</code></em> 发布到 <em><code>Github</code></em> 中; <br/>
-  6. 执行下面命令,将修改的源码推送到 <em><code>source</code></em> 分支：</p>
+  4. 执行 <em><code>rake preview</code></em> 在本地 localhost:4000 进行预览；</p>
+
+<hr />
+
+<h2>将 Octopress 发布到  GitHub Pages</h2>
+
+<p>首先，需要注册一个 <em><code>GitHub</code></em> 账户，并且创建一个新的 <em><code>GitHub</code></em> 仓库，这个仓库的名称为 <em><code>username.github.io</code></em> ，其中 <em><code>username</code></em> 为你的 GitHub 的用户名。<br/>
+接着，运行以下 <em><code>Octopress</code></em> 命令</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">rake</span> <span class="nx">setup_github_pages</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> <br/>
+来完成配置工作，然后根据接下来的提示输入对应信息即可。 <br/>
+然后，运行以下命令。把博文发布到 GitHub Pages ：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">rake</span> <span class="nx">generate</span>
+</span><span class='line'><span class="nx">rake</span> <span class="nx">deploy</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>  <br/>
+最后，提交博客源文件，将修改的源码推送到 <em><code>source</code></em> 分支：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -147,18 +177,16 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<hr />
-
-<h2>将 Octopress 发布到  GitHub Pages</h2>
+<p></p>
 
 <hr />
 
 <h2>一些心得体会</h2>
 
 <ul>
-<li><p>不要看到命令行就不爽，要仔细读：我仅以我个人来说，我看到黑屏就不是很爽，有时更有种犯晕的感觉，不知道是不是只有妹纸才会这样反感，反正我以往是压根不会仔细看命令行中的提示的，仅仅执行命令就行了，除了发生了error会看一下，其他的提示信息都不看，其实这是不行的，黑屏其实除了error还有一些提示，或者注意事项，是应该仔细看看的，不加以注意，很容易会导致在后续的步骤中报错。在这次搭建博客的额过程中我就吃到了苦头了。</p></li>
-<li><p>不知道是否因为我个人网络的原因，很多命令执行的时候都有报错，但是重复执行几次命令就可以了，error都不见了。</p></li>
-<li><p>遇到问题多多百度、多google，要有耐心，学会自己解决问题。当自己一个个把问题都解决掉的时候，你将会产生一股成就感，而这种成就感将会成为你继续前进的信心与动力。</p></li>
+<li><p>不要看到命令行就不爽，要仔细读：仅以我个人来说，我看到黑屏就经常有种犯晕的感觉，不知道是不是只有妹纸才会这样反感。按照我以往是压根不会仔细看命令行中的提示的，仅仅执行命令就行了，除了发生了 error 会看一下，其他的提示信息都不看，其实这是不行的，黑屏其实除了 error 还有一些提示，或者注意事项，是应该仔细看看的，但是我往往不加以注意，这就很容易导致在后续的步骤中报错。在这次搭建博客的过程中我就吃到了苦头了。</p></li>
+<li><p>不知道是否因为我个人网络的原因，很多命令执行的时候都有报错，但是重复执行几次命令就可以了，error 都不见了。</p></li>
+<li><p>遇到问题多多百度、多 google ，要有耐心，学会自己解决问题。当自己一个个把问题都解决掉的时候，你将会产生一股成就感，而这种成就感将会成为你继续前进的信心与动力。</p></li>
 </ul>
 
 ]]></content>
