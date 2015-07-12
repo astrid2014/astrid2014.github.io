@@ -4,7 +4,7 @@
   <title><![CDATA[Blogs of astrid_chung]]></title>
   <link href="http://astrid2014.github.io/atom.xml" rel="self"/>
   <link href="http://astrid2014.github.io/"/>
-  <updated>2015-06-14T22:14:03+08:00</updated>
+  <updated>2015-07-12T20:17:00+08:00</updated>
   <id>http://astrid2014.github.io/</id>
   <author>
     <name><![CDATA[钟炜凤]]></name>
@@ -12,42 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[My First Octopress Blog]]></title>
-    <link href="http://astrid2014.github.io/blog/2015/06/05/my-first-octopress-blog/"/>
-    <updated>2015-06-05T23:39:52+08:00</updated>
-    <id>http://astrid2014.github.io/blog/2015/06/05/my-first-octopress-blog</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Leichunfeng]]></title>
-    <link href="http://astrid2014.github.io/blog/2015/06/05/leichunfeng/"/>
-    <updated>2015-06-05T23:39:19+08:00</updated>
-    <id>http://astrid2014.github.io/blog/2015/06/05/leichunfeng</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Title]]></title>
-    <link href="http://astrid2014.github.io/blog/2015/06/05/title/"/>
-    <updated>2015-06-05T23:38:46+08:00</updated>
-    <id>http://astrid2014.github.io/blog/2015/06/05/title</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Test1]]></title>
-    <link href="http://astrid2014.github.io/blog/2015/05/29/test1/"/>
-    <updated>2015-05-29T22:12:48+08:00</updated>
-    <id>http://astrid2014.github.io/blog/2015/05/29/test1</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[在 Win7 下使用 Octopress 搭建个人博客]]></title>
