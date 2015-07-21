@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Blogs of astrid_chung]]></title>
+  <link href="http://astrid2014.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://astrid2014.github.io/"/>
+  <updated>2015-07-21T20:06:26+08:00</updated>
+  <id>http://astrid2014.github.io/</id>
+  <author>
+    <name><![CDATA[钟炜凤]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在 Win7 下使用 Octopress 搭建个人博客]]></title>
+    <link href="http://astrid2014.github.io/blog/2015/05/18/ru-he-shi-yong-octopressda-jian-shu-yu-zi-ji-de-bo-ke/"/>
+    <updated>2015-05-18T21:33:49+08:00</updated>
+    <id>http://astrid2014.github.io/blog/2015/05/18/ru-he-shi-yong-octopressda-jian-shu-yu-zi-ji-de-bo-ke</id>
+    <content type="html"><![CDATA[<h2>说在前面的话</h2>
+
+<p>不同于 QQ 空间、朋友圈，记录的多是一时的心情；不同于微博，更多的时候也只是转发
+一些大 V 的观点。一个属于自己的个人博客，就像是一个温暖的窝，可以让你来到这方净土时充满归属感，只有在这片土地上，你并不是临时的租户。</p>
+
+<h2>搭建博客环境</h2>
+
+<p>搭建博客跟搭建房子一样，首先要布置好环境、准备好建筑材料，来搭建房子的框架。那么搭建博客首先，也是重中之重，就是要搭建好博客的环境：</p>
+
+<h3>Step1：安装 Git</h3>
+
+<p>下载并安装 <a href="http://git-scm.com/">git</a> ，我安装的是1.9.4版本，此步骤比较简单，这里就不做赘述；</p>
+
+<h3>Step2：安装 Ruby</h3>
+
+<p>下载并安装 <a href="http://rubyinstaller.org/downloads/">Ruby</a>，我安装的是2.0.0版本。本步骤十分关键也非常容易出错，本步骤没有执行好，后面将会导致各种错误，这可是妹纸我血和泪的教训。<br/>
+<strong>注意事项：</strong><br/>
+安装时记得勾选 <em><code>“Add Ruby executables to your PATH”</code></em> ，将 Ruby 的执行路径加入到环境变量中，如果忘记勾选，亦可手动设置。<br/>
+安装完成后在命令提示符中输入 <em><code>ruby --version</code></em> 来确认是否安装成功。</p>
+
+<h3>Step3：安装DevKit</h3>
+
+<p>下载并安装 <a href="http://rubyinstaller.org/downloads/">DevKit</a>，DevKit下载是一个压缩文件，将其解压到 <em><code>E:/DevKit</code></em>。<br/>
+<strong>注意：</strong></p>
+
+<ul>
+<li>安装目录中没有中文和空格</li>
+<li>必须先安装 Ruby ，而且 Ruby 需要是 <em><code>RubyInstallser</code></em> 安装</li>
+<li>DevKit 的版本必须跟 Ruby 的版本相对应，否则会报错，切记切记！——妹纸我在搭建过程中就栽在了</li>
+</ul>
+
+
+<p>解压后在命令行先后输入以下命令来进行安装：<br/>
+<code>javascript
+e:  
+cd DevKit  
+ruby dk.rb init  
+ruby dk.rb install
+</code></p>
+
+<h3>Step4：安装 Python</h3>
+
+<p>下载并安装 <a href="http://www.python.org/ftp/python/2.7.5/python-2.7.5.msi">Python</a> ，注意要把 E:\Python27\Scripts 和安装文件的根目录 E:\Python27 写进环境变量中，否则后续操作会引起报错——这个同样是妹纸我血泪的教训。<br/>
+博客的代码高亮用到了 <em><code>Python</code></em> 的 <em><code>Pygments</code></em> 模块，在 Python 中安装第三方库需要使用 <em><code>easy_install</code></em> 。</p>
+
+<h3>Step5：安装 Octopress</h3>
+
+<p>在 <em><code>GitBash</code></em> 先后输入如下命令将 Octopress 代码拉到本地：<br/>
+<code>javascript
+cd d:/GitProject   
+git clone git://github.com/imathis/octopress.git octopress  
+</code>
+然后需要安装 <em><code>Octopress</code></em> 的依赖项：<br/>
+  安装依赖项需要用到 <em><code>Ruby</code></em> 的 <em><code>gem</code></em> ，使用下面的命令可以更换 gem 的更新源，使用国内的淘宝镜像速度相对快点。<br/>
+<code>javascript
+  gem sources -a http://ruby.taobao.org/   
+  gem sources -l
+</code>
+修改 <em><code>Octopress</code></em> 目录下的 <em><code>Gemfile</code></em> 文件：<br/>
+  将第一行的 <em><code>http://rubygems.org/</code></em> 修改为 <em><code>http://ruby.taobao.org/</code></em></p>
+
+<p>在命令提示符中进入到 <em><code>Octopress</code></em> 目录，输入下面命令进行依赖项的安装<br/>
+<code>javascript   
+gem install bundler  
+bundle install
+</code>
+输入下面的命令来安装 <em><code>Octopress</code></em> 的默认主题<br/>
+<code>javascript  
+rake install
+</code></p>
+
+<h3>Step6：解决中文问题</h3>
+
+<p>如果博客中包含中文，则需要进行一些设置：    <br/>
+1.在环境变量中设置下面的键值对：
+LANG=zh_CN.UTF-8<br/>
+LC_ALL=zh_CN.UTF-8<br/>
+2.含有中文的文件，需要保存为UTF-8无BOM格式编码</p>
+
+<p>到此所有的准备工作已经结束，可以写博客了。</p>
+
+<hr />
+
+<h2>写博客之前</h2>
+
+<p>在写博客之前，你首先需要花几分钟来了解一下<a href="http://wowubuntu.com/markdown/#list"> markdown</a> 的语法；此外这里有一个<a href="http://mahua.jser.me/">在线编辑工具</a>，可以帮助你一边写博客一边查看页面的效果，十分方便；另 <a href="http://www.sublimetext.com/3">Sublime Text3</a> 也是一个非常棒的编辑工具。</p>
+
+<hr />
+
+<h2>写博客</h2>
+
+<p>  <strong>在环境搭建好的情况下，使用 <em><code>Octopress</code></em> 写博客大致有以下几个步骤：</strong><br/>
+  1. 执行以下语句来生成一篇博文：<br/>
+<code>javascript  
+rake new_post['title']  
+</code><br/>
+其中 “title” 并不是博文标题，而是和生成的文件名以及 URL 有关，该名称不支持中文；博客的标题可以在生成的 markdown 文件中的 “title” 修改，可为中文。<br/>
+  2.在 octopress\source_posts 目录下 ，找出对应生成的 <em><code>markdown</code></em> 文件，使用 Sublime Text3 和 markdown 语法来编辑博客内容；<br/>
+  3. 执行 <em><code>rake generate</code></em> 来生成文章；<br/>
+  4. 执行 <em><code>rake preview</code></em> 在本地 localhost:4000 进行预览；</p>
+
+<hr />
+
+<h2>将 Octopress 发布到  GitHub Pages</h2>
+
+<p>首先，需要注册一个 <em><code>GitHub</code></em> 账户，并且创建一个新的 <em><code>GitHub</code></em> 仓库，这个仓库的名称为 <em><code>username.github.io</code></em> ，其中 <em><code>username</code></em> 为你的 GitHub 的用户名。<br/>
+接着，运行以下 <em><code>Octopress</code></em> 命令<br/>
+<code>javascript   
+rake setup_github_pages   
+</code> <br/>
+来完成配置工作，然后根据接下来的提示输入对应信息即可。 <br/>
+然后，运行以下命令。把博文发布到 GitHub Pages ： <br/>
+<code>javascript   
+rake generate   
+rake deploy  
+</code>  <br/>
+最后，提交博客源文件，将修改的源码推送到 <em><code>source</code></em> 分支： <br/>
+<code>javascript
+git add .
+git commit -m “your message”
+git push origin source
+</code></p>
+
+<hr />
+
+<h2>一些心得体会</h2>
+
+<ul>
+<li><p>不要看到命令行就不爽，要仔细读：仅以我个人来说，我看到黑屏就经常有种犯晕的感觉，不知道是不是只有妹纸才会这样反感。按照我以往是压根不会仔细看命令行中的提示的，仅仅执行命令就行了，除了发生了 error 会看一下，其他的提示信息都不看，其实这是不行的，黑屏其实除了 error 还有一些提示，或者注意事项，是应该仔细看看的，但是我往往不加以注意，这就很容易导致在后续的步骤中报错。在这次搭建博客的过程中我就吃到了苦头了。</p></li>
+<li><p>不知道是否因为我个人网络的原因，很多命令执行的时候都有报错，但是重复执行几次命令就可以了，error 都不见了。</p></li>
+<li><p>遇到问题多多百度、多 google ，要有耐心，学会自己解决问题。当自己一个个把问题都解决掉的时候，你将会产生一股成就感，而这种成就感将会成为你继续前进的信心与动力。</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
