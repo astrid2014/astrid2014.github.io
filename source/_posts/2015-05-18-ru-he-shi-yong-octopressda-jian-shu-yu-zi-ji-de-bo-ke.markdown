@@ -3,7 +3,9 @@ layout: post
 title: "在 Win7 下使用 Octopress 搭建个人博客"
 date: 2015-05-18 21:33:49 +0800
 comments: true
-categories: 
+categories: blogs
+keywords: Octopress  博客 win7
+description: "我的第一篇Octopress博客" 
 ---
 ##说在前面的话
 不同于 QQ 空间、朋友圈，记录的多是一时的心情；不同于微博，更多的时候也只是转发
