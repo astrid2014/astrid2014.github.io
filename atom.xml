@@ -4,7 +4,7 @@
   <title><![CDATA[Blogs of astrid_chung]]></title>
   <link href="http://astrid2014.github.io/atom.xml" rel="self"/>
   <link href="http://astrid2014.github.io/"/>
-  <updated>2015-08-05T21:46:08+08:00</updated>
+  <updated>2015-08-11T22:32:59+08:00</updated>
   <id>http://astrid2014.github.io/</id>
   <author>
     <name><![CDATA[钟炜凤]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[如何定义需求优先级]]></title>
+    <link href="http://astrid2014.github.io/blog/2015/08/10/ruhedingyixuqiuyouxianji/"/>
+    <updated>2015-08-10T22:39:25+08:00</updated>
+    <id>http://astrid2014.github.io/blog/2015/08/10/ruhedingyixuqiuyouxianji</id>
+    <content type="html"><![CDATA[<p>前面已经在《<a href="http://astrid2014.github.io/blog/2015/08/03/ruhepingguxuqiu/">如何评估需求</a>》一文中介绍了如何评估需求，明确什么需求应该做，什么需求不应该做。那么，我们又应该如何定义需求的优先级，明确什么需求先做，什么需求后做呢？</p>
+
+<p>不知道大家是否还记得，在我们读初中或者高中的时候，由于要做的事情比较多，往往分不清事情的优先级，总觉得什么都很重要，无从下手。这个时候，老师跟我们讲过一个方法——<strong>“重要性+紧迫性”</strong>的原则，当时由于年纪尚浅，也不见得有多理解老师的意思，但是现在回想起来，深深觉得这个方法也是同样适用于定义需求的优先级的。</p>
+
+<p>需求的重要性判断基于以下几个方面：</p>
+
+<ul>
+<li>用户基数</li>
+<li>使用频率</li>
+<li>类别重要性（基本型、期望型、兴奋型）</li>
+</ul>
+
+
+<p>对于基础型需求，默认为最高级别；对于期望型需求和兴奋型需求，可以通过运行数形成公式计算：  <br/>
+<strong>用户需求重要性 = 用户使用频率 * 功能使用率 * 类别重要性百分比</strong> <br/>
+这个公式可以这样记忆：有多少用户需要、用户是经常需要还是偶尔需要、这对用户重要还是不重要。</p>
+
+<p>最后，按照<strong>“重要性+紧迫性”</strong>原则：先做重要且紧急的需求，后做重要不紧急的需求，接着做不重要紧急的需求，最后做不紧急不重要的需求。这样我们就可以明确需求的优先级了。</p>
+
+<p>值得一提的是，本文主要是说明怎么去排需求的优先级，并不代表这完完全全就是开发的优先级。我们往往在开发的过程中会夹杂优先级高和优先级低的需求，这是因为这涉及到需求的工作量以及研发资源调配等问题，假如一些需求或 BUG 极其简单，那么就可以安排
+一并开发。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[如何评估需求]]></title>
@@ -39,7 +68,7 @@ Q2：如果产品中没有这个功能，用户会觉得怎样？  <br/>
 A：表示我喜欢这样 B：表示我期望这样 C：表示我没有意见 D：表示我可以忍受这样 E：表示我讨厌这样  <br/>
 我们得出一个表格： <br/>
 <img src="http://astrid2014.github.io/images/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E9%9C%80%E6%B1%82.png" alt="KANO模型需求归类矩阵" />   <br/>
-其中，M 代表 Must-have ，是基本型需求；L 代表 Linear ，是期望型需求；E 代表 Exciter ，是兴奋性需求；R 代表 Reverse ，是相反的需求；Q 表示Quetionable ， 是可可疑的结果；I 代表 Indifferent ，是无关紧要的。   <br/>
+其中，M 代表 Must-have ，是基本型需求；L 代表 Linear ，是期望型需求；E 代表 Exciter ，是兴奋性需求；R 代表 Reverse ，是相反的需求；Q 表示Quetionable ， 是可疑的结果；I 代表 Indifferent ，是无关紧要的。   <br/>
 通过 KANO 模型，我们便可以对需求进行评估，哪些需求应该做，哪些需求不应该做，一目了然。但是，值得注意的是，任何事物都是变化的，用户需求也不例外，所以必须要注意时效性。</p></li>
 </ul>
 
